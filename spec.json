@@ -1,0 +1,12 @@
+{
+	"name":"RemoveRecent",
+	"schemaVersion": "1.0",
+	"extensions": [
+	{
+		"perspective": "home",
+		"features": [{
+			"id": "sample.home.exclude.mruSlideout",
+			"excludeItems":["com.ibm.bi.contentApps.mruSlideout" ]
+			
+		}]
+	}]}

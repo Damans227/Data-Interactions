@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<iframe src="https://us3.ca.analytics.ibm.com/bi/?perspective=dashboard&pathRef=.public_folders%2FTest%2BFolder%2FTestingPhaseVersion01&action=view&mode=dashboard&ui_appbar=false&ui_navbar=false&isAuthoringMode=false" width="100%" height="950px" frameborder="0" allowfullscreen></iframe>
+
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<div id="queryResultContainer"/>
+<script type="text/javascript">
+    var url = 'us3.ca.analytics.ibm.com/bi/?perspective=dashboard&pathRef=.public_folders%2FTest%2BFolder%2FTestingPhaseVersion01&action=view&mode=dashboard&ui_appbar=false&ui_navbar=false&isAuthoringMode=false';//without http://
+    $.getJSON('http://anyorigin.com/go?url=' + url + '&callback=?', function (data) {
+        var aa = data.contents;
+        $('#queryResultContainer').html(aa + "<script> setInterval(function () { $('#queryResultContainer').find('a').removeAttr('target');}, 200);</script" + ">");
+    });
+</script>
+
+
+</body>
+</html>
